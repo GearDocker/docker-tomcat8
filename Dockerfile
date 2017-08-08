@@ -1,6 +1,6 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
-MAINTAINER Carlos Moro <cmoro@deusto.es>
+MAINTAINER Gary Leong <gwleong@gmail.com>
 
 ENV TOMCAT_VERSION 8.0.45
 
@@ -45,8 +45,8 @@ ENV PATH $PATH:$CATALINA_HOME/bin
 
 EXPOSE 8080
 EXPOSE 8009
-VOLUME "/opt/tomcat/webapps"
-WORKDIR /opt/tomcat
+#VOLUME "/opt/tomcat/webapps"
+#WORKDIR /opt/tomcat
 
 # Launch Tomcat
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
