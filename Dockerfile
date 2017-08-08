@@ -18,6 +18,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && \
 apt-get install -y git build-essential curl wget software-properties-common
 
+# Install dependencies
+RUN apt-get install maven -y
+
 # Install JDK 8
 RUN \
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
