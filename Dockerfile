@@ -4,6 +4,8 @@ MAINTAINER Gary Leong <gwleong@gmail.com>
 
 ENV TOMCAT_VERSION 8.0.45
 
+RUN apt-get clean && apt-get update && apt-get install -y locales
+
 # Set locales
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
